@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        min-height: 100vh;
+        background: #111;
+        overflow: hidden;
+    }
+    span{
+        position: absolute;
+        pointer-events: none;
+        filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+        animation: fadeinout 1s linear infinite;
+    }
+    @keyframes fadeinout {
+        0%,100%{
+            opacity: 0;
+        }
+        20%,80%{
+            opacity: 1;
+        }
+        
+    }
+    span::before{
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('./img/heart_PNG51122.png');
+        background-size: cover;
+        animation: moveshape 1s linear ;
+    }
+    @keyframes moveshape {
+        0%{
+            transform: translate(0) rotate(0deg);
+        }
+        100%{
+         transform: translate(300px) rotate(360deg);   
+        }
+    }
+</style>
+<body>
+    <script>
+        document.addEventListener('mousemove',function(e){
+            let body=document.querySelector('body');
+            let heart=document.createElement('span');
+            let x=e.offsetX;
+            let y=e.offsetY;
+            heart.style.left=x+'px';
+            heart.style.top=y+'px';
+            let size=Math.random()*80;
+            heart.style.width=20+size+'px';
+            heart.style.height=20+size+'px';
+            let transformvalue=Math.random()*360;
+            heart.style.transform='rotate('+transformvalue+'deg)';
+            body.appendChild(heart);
+            setTimeout(function(){
+               heart.remove() 
+            },1000)
+        })
+    </script>
+</body>
+</html>

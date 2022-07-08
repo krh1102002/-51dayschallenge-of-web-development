@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap  example </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+    body{
+        background: linear-gradient(253deg,blue,red);
+    }
+</style>
+</head>
+<body>
+
+<div class="container justify-content-center align-items-center mt-5 my-5" >
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin:auto;">
+    Click Me
+  </button>
+   
+  <!--  Modal box  -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+   
+        <!--  Modal box head  -->
+        <div class="modal-header">
+          <h4 class="modal-title">Langague Require For Web Development</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+   
+        <!--  Modal box body  -->
+        <div class="modal-body">
+           <ol type="1">
+           <li>Html</li>
+           <li>Css</li>
+           <li>JavaScript</li>
+           <li>Bootstrap</li>
+           </ol>
+        </div>
+   
+        <!--  At the bottom of the modal box  -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"> close </button>
+        </div>
+   
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>

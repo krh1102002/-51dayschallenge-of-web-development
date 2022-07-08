@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Document</title>
+    <style>
+        .container{
+            border-radius: 10px;
+            height: 600px;
+            /* background-image: linear-gradient(180deg,#e8ecef,#fd0808); */
+        }
+        .card-heading{
+            background-image: linear-gradient(60deg,#f046ff,#9b00e8);
+            padding: 9px 15px;
+            color: white;
+        }
+        .jj{
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        label{
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row col-md-6 offset-md-3">
+            <div class="card card-primary">
+                <div class="card-heading text-center p-10">
+                    <h1>Registration Form</h1>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="myname">Name:</label>
+                            <input type="text" placeholder="Enter Name" id="myname" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Gender:</label>
+                            <div>
+                                <label for="male" class="radio-inline jj"><input type="radio" name="gender" id="male">     Male</label>
+                                <label for="female" class="radio-inline jj "><input type="radio" name="gender" id="female">    Female </label>
+                                <label for="others" class="radio-inline jj"><input type="radio" name="gender" id="others">    Others</label>
+                            </div>    
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" placeholder="Enter Email" id="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" placeholder="Enter Password" id="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Mobile Number:</label>
+                            <input type="number" placeholder="Enter Number" id="number" class="form-control">
+                        </div>
+                        <input type="submit" class="btn btn-primary">
+                    </form>
+                </div>
+                <div class="card-footer text-right">
+                    <small>&copy;made by kunal hulke</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

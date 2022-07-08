@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <style>
+        *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;   
+        }body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .box{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .box img{
+            position: absolute;
+            backface-visibility: hidden;
+            height: 300px;
+            width: 300px;
+            transition: 1s;
+        }
+        .box img:nth-child(2){
+            transform: rotateY(180deg);
+        }
+        .box:hover img:nth-child(2){
+            transform: rotateY(0deg);
+        }
+        .box:hover img:nth-child(1){
+            transform: rotateY(-180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./img/2.jpg" alt="img1">
+        <img src="./img/1.jpg" alt="img2">
+    </div>
+</body>
+</html>

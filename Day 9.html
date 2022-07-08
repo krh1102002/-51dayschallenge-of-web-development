@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+
+        button{
+            display: flex;
+        }
+        button:hover{
+            color: red;
+        }
+        .jj img{
+            width: 400px;
+            height: 400px;
+            margin-left: -106px;
+        }
+        .container img{
+            box-shadow: 0px 5px 5px black;
+        }
+        .container{
+            padding-left: 271px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container my-5 m-auto">
+        <div class="row">
+            <div class="col-12 jj">
+                <img src="./img/young.jpg" id="img">
+            </div>
+        </div>
+        <div class="row offset-1 my-3">
+            <div class="col-2 jg" onclick="old()" style="margin-left: -51pxx;"><button class="d-flex">Old pic</button></div>
+            <div class="col-4 jh" onclick="young()" style="    margin-left: 227px ;"><button class="d-flex">Present</button></div>
+        </div>
+    </div>
+    <script>
+        var v=document.getElementById('img');
+        function young(){
+            v.src='./img/young.jpg';
+        }
+        function old(){
+            v.src='./img/old.jpg';
+        }
+    </script>
+</body>
+</html>

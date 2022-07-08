@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/021358633c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body{
+            background-image: linear-gradient(56deg,#6afbec6f,rgba(124, 150, 228, 0.749));
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5" style="margin-top:auto">
+        <div class="row text-center">
+            <div class="col-md-12 py-md-4 jgh">
+                <h1>Responsive Search Engine</h1>
+            </div>
+            <div class="col-md-5 offset-md-3">
+                <input type="text" class="col-md-2 pl-0 px-3 w-50  query" placeholder="Search Here" style=" border-radius: 20px;border: 1px thin black; ">
+                <i class="fa-solid fa-magnifying-glass " style="margin-left:-28px;"></i>
+            </div>
+            <div class="col-md-7 mt-3">
+                <button class="btn offset-md-8 btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let query=document.querySelector('.query');
+        let searchbtn=document.querySelector('.btn');
+
+        searchbtn.onclick=function(){
+            let url='https://www.google.com/search?q='+query.value;
+            window.open(url,'_self');
+        }
+    </script>
+</body>
+</html>
