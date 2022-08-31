@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 22: Text Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            font-family: 'poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+
+        }
+        h2{
+            position: relative;
+            color:#fff;
+            font-weight: 900;
+            font-size: 3.5em;
+            overflow: hidden;
+            z-index: 1;
+            margin: 20px 0 0;
+        }
+        h2:before{
+            content: " ";
+            position: absolute;
+            height: 100%;
+            width: 120%;
+            left: 110%;
+            background: linear-gradient(90deg,transparent 0%, #000 5%,#000 100%);
+            animation: animate 5.5s linear forwards;
+            animation-delay: 2s;
+        }
+        @keyframes animate {
+            0%{
+                left: 120%;
+            }
+            100%{
+                left: -20%;
+            }
+        }
+        h2 span{
+            color:red;
+        }
+        video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+    </style>
+</head>
+<body>
+    <video src="img/particles.mp4" muted="" autoplay=""></video>
+    <h2><span>Pa</span>rticles Di<span>sto</span>rtion Effect</h2>
+</body>
+</html>
