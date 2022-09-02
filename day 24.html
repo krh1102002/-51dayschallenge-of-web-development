@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 24</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #262626;
+        }
+        img{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            filter: opacity(0.1);
+            top: 50%;
+            left: 50%;
+            transition: .5s ease-in-out;
+            border-radius: 20px;
+        }
+        img:hover{
+            filter: grayscale(0%);
+            cursor: pointer;
+            width: 500px;
+            height: 310px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="display: flex; justify-content:center;color:white;font-size:3rem;">Mouse Effect</h2>
+    <div class="container" style="width: 100vw; height:100vh; display:flex; justify-content:center;align-items:center;">
+        <img src="img/rose.jpg" alt="" width="488px" height="300px">
+    </div>
+</body>
+</html>
