@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 26:Love Calculator</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('/img/R.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            /* opacity: 0.6;
+            z-index: -1; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container  w-50 h-auto d-flex justify-content-center mt-5" >
+        <div class="card" style="width: 30rem;">
+            <div class="card-header text-white bg-danger d-flex justify-content-center align-items-center"><h1 class="">Love Calculator</h1></div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                            <label for="you" style="font-weight: 600;">Your Name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="you" placeholder="Enter Your Name">
+                            
+                          </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-center align-items-center" style="margin-top: 15px;    font-size: 31px;"><span>+</span></div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="love" style="font-weight: 600;">Love Name<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="love" placeholder="Enter Love Name" class="px-3 w-50">
+                              </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="d-flex justify-content-center align-items-center" style="font-size: 28px;
+                        font-weight: 600;" id="root"></p>
+                    </div>
+                </form>
+                <div class="row w-50 m-auto"> <button class="btn btn-success" onclick="calculate()">Calculate</button></div>
+               
+            </div>
+            <div class="card-footer">
+                <p id="foot" class="d-flex justify-content-center align-items-center" style="font-weight: 700;"></p>
+            </div>
+          </div>
+    </div>
+    <script>
+        let root=document.getElementById('root');
+        let foot=document.getElementById("foot");
+        function calculate(){
+            let x = Math.floor((Math.random() * 100) + 1);
+            root.innerHTML=x+'%';
+            if(x>=80){
+                foot.innerHTML='❤️God Bless Your Relationship❤️';
+            }
+            else if(x>=40 && x<80){
+                foot.innerHTML='😥Your Relationship is in Moderate state😥';
+            }
+            else{
+                foot.innerHTML='😱🥵Your Relationship is in Danger state😭😨';
+            }
+        }
+    </script>
+</body>
+</html>
