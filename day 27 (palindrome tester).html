@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 27: Palindrome Tester</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <style>
+        body{
+            background: linear-gradient(45deg,#B353EE,rgb(248, 112, 112));
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 300px ;
+            height: 300px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 5px 10px 8px rgb(84, 83, 83);
+        }
+        section{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        #foot span{
+            color:royalblue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="row"><h4 class="mt-4" style="font-size: 24px;">Palindrome Tester:</h4>
+            <p class="pl-5" style="margin-left: 8px; font-weight: 200;text-align: justify; padding-right: 35px;">A Palindrome is a word or phrase that reads same backwards as forwards.<br> Eg. abcba, 12321.</p></div>
+            <div class="row"><input type="text"  id="inputbox" placeholder="Enter the word" class="w-75 m-auto" ></div>
+            <div class="row"><button  onclick="checkbtn()" class="btn w-25 m-auto mt-3 btn-outline-success"> Check</button></div>
+            <p class="mt-2" id="foot" style="    font-size: 15px;
+            font-family: cursive;"></p>
+        </div>
+    </section>
+    <script>
+        
+        function checkbtn(){
+            // u.style.display='block';
+            let userinput=(String(document.getElementById('inputbox').value));
+            let check=0;
+            document.getElementById('foot').style.display='block';
+            for(let i=0;i<Math.floor(userinput.length/2);i++){
+                if(userinput.charAt(i)!=userinput.charAt(userinput.length-1-i)){
+                    check=1;
+                }
+            }
+            
+            if(check){
+            document.getElementById('foot').innerHTML=`No, <span>'${userinput}' </span> isn't a Palindrome.`;
+            }
+            else{
+                document.getElementById('foot').innerHTML=`Yes, <span>'${userinput}' </span> is a Palindrome.`;
+            }
+        }
+        document.getElementById('foot').style.display="none";
+    </script>
+</body>
+</html>
